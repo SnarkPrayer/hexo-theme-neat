@@ -1,0 +1,31 @@
+<%
+    switch (type) {
+        case 'category':
+            title = page.category;
+            break;
+        case 'tag':
+            title = '#' + page.tag;
+            break;
+    }
+%>
+<div class="timeline timeline-wrap">
+    <div class="timeline-row timeline-row-major">
+        <h1 class="title"><%= title %></h1>
+    </div>
+    <% page.posts.each(function (post, i) { %>
+        <div class="timeline-row">
+            <div class="content">
+                <%- partial('post/date', { post: post, class_name: 'article-date', date_format: null }) %>
+                <%- partial('post/title', { post: post, index: true, class_name: 'timeline-article-title' }) %>
+            </div>
+        </div>
+    <% }); %>
+</div>
+<% if (page.total > 1) { %>
+    <nav id="page-nav">
+        <%- paginator({
+            prev_text: '&laquo; ' + __('nav.prev'),
+            next_text: __('nav.next') + ' &raquo;'
+        }) %>
+    </nav>
+<% } %>

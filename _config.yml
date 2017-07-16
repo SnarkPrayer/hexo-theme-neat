@@ -1,0 +1,38 @@
+# main menu navigation
+menu:
+	Home: /
+	#Tags: /tags
+	#About: /about
+	#Contact: /contact
+	Archives: /archives
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/style.css
+- /css/ionicons.css
+- https://fonts.googleapis.com/css?family=Abel|Alegreya+Sans+SC
+
+# scripts loaded in the end of the body
+scripts:
+- /js/main.js
+
+# Customize
+customize:
+		highlight: monokai
+		thumbnail: false # enable posts thumbnail, options: true, false
+		favicon: # path to favicon
+		social_icon_prefix: ion-social
+		social_links:
+				github: https://github.com/SnarkPrayer
+				twitter: https://twitter.com/SnarkPrayer
+				instagram: 
+				dribbble: 
+				# facebook: /
+				# dribbble: /
+				# rss: /
+				# weibo: https://m.weibo.cn/u/2497612015
+		social_link_tooltip: true # enable the social link tooltip, options: true, false
+
+# Plugins
+plugins:
+	google_analytics: # enter the tracking ID for your Google Analytics

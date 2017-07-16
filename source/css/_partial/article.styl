@@ -1,0 +1,192 @@
+.article
+	width: 100%
+	margin-top: block-margin
+	@media mq-mobile
+		margin-top: 0
+
+	.article-thumb
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 540px
+		overflow: hidden
+		opacity: .5
+		z-index: -1
+		img
+			width: 100%
+
+		@media mq-mobile
+			height: auto
+
+
+	.article-inner
+		@media mq-mobile
+			padding: 0 20px
+
+		.article-header
+			@extend $article-header
+
+			.article-date, .article-category-link
+				color: rgba(color-txt, 0.5)
+				font-size: 16px
+				font-weight: 300
+
+			.article-category-link
+				a
+					color: rgba(color-txt, 0.5)					
+
+		.article-entry
+			@extend $type-style
+			padding-bottom: 60px 
+
+
+			.article-more-link
+				margin: 40px 0 0
+				text-align: center
+				font-family: Georgia
+				a
+					line-height: 26px
+					padding: 0 30px
+					background-color: color-background-light
+					border-radius: 13px
+					color: color-grey
+					&:hover
+						background-color: color-default
+						color: color-white !important
+
+		.article-footer
+			padding: article-padding
+			height: 60px
+			text-align: center
+			border-top: 1px dotted color-border
+			.article-tag,
+			.article-share
+				display: inline
+				padding: 0 20px
+				a
+					color: color-grey
+			.article-share
+				i
+					font-size: 14px
+					margin-right: 4px
+
+.article-type-post
+	.article-inner
+		.article-header
+			h1.article-title
+				margin-bottom: 280px
+
+				@media mq-mobile
+					margin-bottom: 60px
+
+#article-nav
+	clearfix()
+	position: relative
+	margin: 40px 0
+	@media mq-mobile
+		&:before
+			absolute-center(8px)
+			content: ""
+			border-radius: 50%
+			background: color-grey
+
+.article-nav-link-wrap
+	text-decoration: none
+	color: color-grey
+	box-sizing: border-box
+	text-align: center
+	display: block
+	&:hover
+		color: color-default
+	@media mq-mobile
+		width: 50%
+		margin-top: 0
+
+#article-nav-newer
+	@media mq-mobile
+		float: left
+		text-align: right
+		padding-right: 30px
+
+#article-nav-older
+	@media mq-mobile
+		float: right
+		text-align: left
+		padding-left: 30px
+
+.article-nav-caption
+	letter-spacing: 2px
+	line-height: 1em
+	text-transform: uppercase
+	#article-nav-newer &
+		margin-right: -2px
+
+.article-nav-title
+	font-size: 0.85em
+	margin-top: 0.5em
+	line-height: line-height
+
+.article-share-box
+	position: absolute
+	display: none
+	background: #fff
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1)
+	border-radius: 3px
+	margin-left: -145px
+	overflow: hidden
+	z-index: 1
+	&.on
+		display: block
+
+.article-share-input
+	width: 100%
+	background: none
+	box-sizing: border-box
+	font: 14px font-sans
+	padding: 0 10px
+	color: color-default
+	outline: none
+	border: 1px solid color-border
+	border-radius: 3px 3px 0 0
+	height: 36px
+	line-height: 36px
+
+.article-share-links
+	clearfix()
+	background: color-background
+	a
+		width: 50px
+		height: 36px
+		display: block
+		float: left
+		text-align: center
+		line-height: 36px
+		position: relative
+		color: #999
+		text-shadow: 0 1px #fff
+		
+		&:before
+			font-size: 20px
+		&:hover
+			color: #fff
+
+.article-share-twitter
+	&:hover
+		background: color-twitter
+		text-shadow: 0 1px darken(color-twitter, 20%)
+
+.article-share-facebook
+	&:hover
+		background: color-facebook
+		text-shadow: 0 1px darken(color-facebook, 20%)
+
+.article-share-pinterest
+	&:hover
+		background: color-pinterest
+		text-shadow: 0 1px darken(color-pinterest, 20%)
+
+.article-share-google
+	&:hover
+		background: color-google
+		text-shadow: 0 1px darken(color-google, 20%)
