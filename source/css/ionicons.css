@@ -726,7 +726,7 @@
 .ion-spoon:before,
 .ion-star:before,
 .ion-stats-bars:before,
-.ion-steam:before,
+.ion-social-steam:before,
 .ion-stop:before,
 .ion-thermometer:before,
 .ion-thumbsdown:before,
@@ -3581,7 +3581,7 @@
   content: "\f2b5";
 }
 
-.ion-steam:before {
+.ion-social-steam:before {
   content: "\f30b";
 }
 

@@ -2,9 +2,9 @@
 	width: 100%
 	margin-top: block-margin
 	@media mq-mobile
-		margin-top: 0
+		margin-top: (block-margin/4)
 
-	.article-thumb
+	.article-cover
 		position: absolute
 		left: 0
 		top: 0
@@ -21,6 +21,7 @@
 
 
 	.article-inner
+		position: relative
 		@media mq-mobile
 			padding: 0 20px
 
@@ -39,21 +40,17 @@
 		.article-entry
 			@extend $type-style
 			padding-bottom: 60px 
-
-
+			
 			.article-more-link
 				margin: 40px 0 0
 				text-align: center
-				font-family: Georgia
+				font-family: Abel
 				a
 					line-height: 26px
 					padding: 0 30px
-					background-color: color-background-light
 					border-radius: 13px
 					color: color-grey
-					&:hover
-						background-color: color-default
-						color: color-white !important
+					text-decoration: none
 
 		.article-footer
 			padding: article-padding
@@ -64,6 +61,7 @@
 			.article-share
 				display: inline
 				padding: 0 20px
+				color: color-grey
 				a
 					color: color-grey
 			.article-share
@@ -78,18 +76,53 @@
 				margin-bottom: 280px
 
 				@media mq-mobile
-					margin-bottom: 60px
+					margin-bottom: 40px
+
+
+.article-toc
+	position: fixed
+	right: 30px
+	top: 30%
+
+	@media mq-mobile
+		display: none
+
+	.toc
+		li
+			padding: 2px 0
+			a
+				display: block
+				padding: 3px 5px
+				line-height: 25px
+				height: 25px
+				color: color-grey
+				text-align: right
+				&:before
+					float: right
+					content: ''
+					width: 7px
+					height: 7px
+					vertical-align: middle
+					background: #fff
+					margin-left: 5px
+					border: 2px solid color-grey
+					border-radius: 50%
+					margin-top: 2px
+				span
+					transition: opacity 0.3s linear;
+					display: block;
+					overflow: hidden;
+					line-height: 1.2;
 
 #article-nav
 	clearfix()
 	position: relative
 	margin: 40px 0
-	@media mq-mobile
-		&:before
-			absolute-center(8px)
-			content: ""
-			border-radius: 50%
-			background: color-grey
+	&:before
+		absolute-center(8px)
+		content: ""
+		border-radius: 50%
+		background: color-grey
 
 .article-nav-link-wrap
 	text-decoration: none
@@ -97,23 +130,19 @@
 	box-sizing: border-box
 	text-align: center
 	display: block
+	width: 50%
 	&:hover
 		color: color-default
-	@media mq-mobile
-		width: 50%
-		margin-top: 0
 
 #article-nav-newer
-	@media mq-mobile
-		float: left
-		text-align: right
-		padding-right: 30px
+	float: left
+	text-align: right
+	padding-right: 30px
 
 #article-nav-older
-	@media mq-mobile
-		float: right
-		text-align: left
-		padding-left: 30px
+	float: right
+	text-align: left
+	padding-left: 30px
 
 .article-nav-caption
 	letter-spacing: 2px

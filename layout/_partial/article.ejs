@@ -1,8 +1,8 @@
 <article id="<%= post.layout %>-<%= post.slug %>" class="article <% if (!index){ %>article-type-<%= post.layout %><% } %> itemscope itemprop="blogPost">
   <% if (!index){ %>
-    <% if (post.thumb) { %>
-      <div class="article-thumb">
-        <%- partial('post/thumb') %>
+    <% if (post.cover) { %>
+      <div class="article-cover">
+        <%- partial('post/cover') %>
       </div>
     <% } %>
   <% } %>

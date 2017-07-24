@@ -25,6 +25,8 @@ $article-header
     letter-spacing: 0px
     font-weight: 300
     font-style: normal
+    @media mq-mobile
+      font-size: 24px
 
 
 $type-style
@@ -35,10 +37,13 @@ $type-style
   font-style: normal
   color: #1f1f1f
   a
-    color: color-default
+    color: color-link
+    text-decoration: underline
   h1,h2,h3,h4,h5,h6
     line-height:2
-    margin-top: 1em
+    margin: 1em 0
+    color: #000
+    font-weight: 400
 
   img,audio, canvas, video
     max-width: 100%
@@ -93,7 +98,7 @@ $type-style
   sub 
     bottom: -0.25em
   
-  ins, a 
+  ins
     text-decoration: none
 
   u 

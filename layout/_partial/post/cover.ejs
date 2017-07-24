@@ -1,0 +1,15 @@
+<% if (index) { %>
+	<% if (post.link) { %>
+		<a href="<%- url_for(post.link) %>" target="_blank" itemprop="url">
+			<img src="<%- post.cover %>" />
+		</a>
+	<% } else if (post.cover) { %>
+		<a href="<%- url_for(post.path) %>" itemprop="url">
+			<img src="<%- post.cover %>" />
+		</a>
+	<% } %>
+<% } else { %>
+	<% if (post.cover) { %>
+			<img src="<%- post.cover %>" />
+	<% } %>
+<% } %>
