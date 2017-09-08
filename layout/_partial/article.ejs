@@ -1,4 +1,4 @@
-<article id="<%= post.layout %>-<%= post.slug %>" class="article <% if (!index){ %>article-type-<%= post.layout %><% } %> itemscope itemprop="blogPost">
+<article id="<%= post.layout %>-<%= post.slug %>" class="article<% if (!index){ %> article-type-<%= post.layout %><% } %>" itemscope itemprop="blogPost">
   <% if (!index){ %>
     <% if (post.cover) { %>
       <div class="article-cover">
@@ -7,13 +7,11 @@
     <% } %>
   <% } %>
   <div class="article-inner">
-    <% if (post.link || post.title){ %>
-      <header class="article-header">
-        <%- partial('post/category') %>
-        <%- partial('post/title', {class_name: 'article-title'}) %>
-        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-      </header>
-    <% } %>
+    <header class="article-header">
+      <%- partial('post/category') %>
+      <%- partial('post/title', {class_name: 'article-title'}) %>
+      <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
+    </header>
     <div class="article-entry" itemprop="articleBody">
       <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
@@ -25,24 +23,11 @@
       <% } %>
     </div>
     <% if (!index){ %>
-      <footer class="article-footer">
-        <% if (post.comments && config.disqus_shortname){ %>
-          <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
-        <% } %>
-          <%- partial('post/tag') %>
-          <%- partial('post/share') %>
-      </footer>
+    <footer class="article-footer">
+      <%- partial('post/tag') %>
+      <%- partial('post/share') %>
+    </footer>
     <% } %>
   </div>
 </article>
-<% if (!index){ %>
-  <%- partial('post/nav') %>
-<% } %>
-
-<% if (!index && post.comments && config.disqus_shortname){ %>
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
-<% } %>
+<% if (!index){ %><%- partial('post/nav') %><% } %>
