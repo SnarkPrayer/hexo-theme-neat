@@ -10,7 +10,7 @@ menu:
 stylesheets:
 - /css/style.css
 - /css/ionicons.css
-- https://fonts.googleapis.com/css?family=Abel|Alegreya+Sans+SC
+- https://fonts.googleapis.com/css?family=Abel|Alegreya+Sans+SC #logo及导航字体
 
 # scripts loaded in the end of the body
 scripts:
@@ -18,21 +18,31 @@ scripts:
 
 # Customize
 customize:
-		highlight: monokai
-		thumbnail: false # enable posts thumbnail, options: true, false
-		favicon: # path to favicon
+		favicon: # /css/images/favicon.ico
 		social_icon_prefix: ion-social
 		social_links:
-				github: https://github.com/SnarkPrayer
-				twitter: https://twitter.com/SnarkPrayer
-				instagram: 
-				dribbble: 
+				github: 
+				twitter: 
+				# instagram: 
+				steam: 
+				# dribbble: 
 				# facebook: /
 				# dribbble: /
 				# rss: /
-				# weibo: https://m.weibo.cn/u/2497612015
-		social_link_tooltip: true # enable the social link tooltip, options: true, false
+				# weibo: /
 
 # Plugins
 plugins:
 	google_analytics: # enter the tracking ID for your Google Analytics
+	google_site_verification: # enter Google site verification code
+
+# Miscellaneous
+miscellaneous:
+		open_graph: # see http://ogp.me
+				fb_app_id:
+				fb_admins:
+				twitter_id:
+				google_plus:
+
+sitemap:
+    path: sitemap.xml
