@@ -4,124 +4,137 @@
 @import "_util/grid"
 
 *
-	box-sizing: border-box
+  box-sizing: border-box
 html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu
-	margin:0
-	padding:0
+  margin:0
+  padding:0
 header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details
-	display:block
+  display:block
 table
-	border-collapse:collapse
-	border-spacing:0
+  border-collapse:collapse
+  border-spacing:0
 caption,th
-	text-align:left
-	font-weight:normal
+  text-align:left
+  font-weight:normal
 html,body,fieldset,img,iframe,abbr
-	border:0
+  border:0
 i,cite,em,var,address,dfn
-	font-style:normal
+  font-style:normal
 [hidefocus],summary
-	outline:0
+  outline:0
 li
-	list-style:none
+  list-style:none
 textarea
-	overflow:auto
-	resize:none
+  overflow:auto
+  resize:none
 button
-	border: 1px solid color-border
-	background: none
+  border: 1px solid color-border
+  background: none
 label,summary
-	cursor:default
+  cursor:default
 a,button
-	cursor:pointer
+  cursor:pointer
 a 
-	display: inline-block
-	text-decoration: none
-	color: color-link
-	transition: all .4s ease-in-out
+  display: inline-block
+  text-decoration: none
+  color: color-link
+  transition: all .4s ease-in-out
 a:focus
-	outline: thin dotted;
+  outline: thin dotted;
 ::-webkit-input-placeholder
-	opacity: .5;
+  opacity: .5;
 
 :-moz-input-placeholder
-	opacity: .5;
+  opacity: .5;
 
 :-ms-input-placeholder
-	opacity: .5;
+  opacity: .5;
 .clearfix:after
-	content: ".";
-	visibility: hidden;
-	display: block;
-	height: 0;
-	clear: both;
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 p
-	margin-bottom: 1em
-	text-align: justify
+  margin-bottom: 1em
+  text-align: justify
 h1
-	font-size: 2em
+  font-size: 2em
 h2
-	font-size: 1.5em
+  font-size: 1.5em
 h3
-	font-size: 1.3em
+  font-size: 1.3em
 h4
-	font-size: 1.2em
+  font-size: 1.2em
 h5
-	font-size: 1em
+  font-size: 1em
 h6
-	font-size: 1em
+  font-size: 1em
 
 h1,h2,h3,h4,h5,h6
-	font-weight: 100
+  font-weight: 100
 
 hr
-	border: 1px dashed color-border
+  border: 1px dashed color-border
 
 .caption
-	color: color-grey
-	display: block
-	font-size: 0.9em
-	margin-top: 0.5em
-	position: relative
-	text-align: center
+  color: color-grey
+  display: block
+  font-size: 0.9em
+  margin-top: 0.5em
+  position: relative
+  text-align: center
 
 body
-	font-family: PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif
-	font-size: font-size
-	-webkit-text-size-adjust: 100%
-html, body, #container
-	height: 100%
+  font-family: PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif
+  font-size: font-size
+  -webkit-text-size-adjust: 100%
+html, body
+  height: 100%
 
-.outer
-	width: 100%
-	max-width: column-width * main-column
-	margin: 0 auto
+.text-center
+  display: inline
+  text-align: center
 
-#page-nav
-	margin: block-margin auto 0 auto
-	text-align: center
-	color: color-grey
-	overflow: hidden
-	a, span
-		height: 30px
-		color: color-txt
-		background-color: #fff
-		padding: 0 12px
-		line-height: 30px
-		text-align: center
-		display: inline-block
-		border-radius: 2px
-		
-	a
-		text-decoration: none
-		&:hover
-			color: #fff !important
-			background: color-default
-			
-		.page-number
-			display: inline-block
-	.current
-		color: color-grey
+.main
+  max-width: column-width * main-column
+  margin: 0 auto
+  padding: article-padding * 2.5 article-padding 0 article-padding
+  @media mq-mobile
+    padding: article-padding*1.5 article-padding*0.5 0 article-padding*0.5
+
+  .content
+    width: 100%
+    max-width: 700px
+    display: block
+    margin: 0 auto
+
+
+.pagination
+  margin: block-margin auto 0 auto
+  text-align: center
+  color: color-grey
+  overflow: hidden
+  a, span
+    height: 30px
+    color: color-txt
+    background-color: #fff
+    padding: 0 12px
+    line-height: 30px
+    text-align: center
+    display: inline-block
+    border-radius: 2px
+    
+  a
+    text-decoration: none
+    &:hover
+      color: #fff
+      background: color-default
+      
+    .page-number
+      display: inline-block
+  .current
+    color: color-grey
 
 
 @import "_extend"

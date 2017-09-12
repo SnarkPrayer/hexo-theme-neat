@@ -1,0 +1,9 @@
+<div class="article-cover" style="background-image:<% if (!index){ %><% if (post.cover) { %>url(<%- post.cover %>)<% } %><% } %>">
+  <div class="cover-layer"></div>
+  <div class="article-header">
+    <div class="article-title">
+      <%- partial('post/category') %>
+      <%- partial('post/title', {class_name: 'article-title'}) %>
+    </div>
+  </div>
+</div>

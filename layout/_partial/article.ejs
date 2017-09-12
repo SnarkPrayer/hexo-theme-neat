@@ -1,33 +1,32 @@
+<div class="content">
 <article id="<%= post.layout %>-<%= post.slug %>" class="article<% if (!index){ %> article-type-<%= post.layout %><% } %>" itemscope itemprop="blogPost">
-  <% if (!index){ %>
-    <% if (post.cover) { %>
-      <div class="article-cover">
-        <%- partial('post/cover') %>
-      </div>
-    <% } %>
-  <% } %>
-  <div class="article-inner">
-    <header class="article-header">
+  <% if (index){ %>
+  <div class="article-header">
+    <div class="article-title">
       <%- partial('post/category') %>
       <%- partial('post/title', {class_name: 'article-title'}) %>
       <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-    </header>
-    <div class="article-entry" itemprop="articleBody">
-      <% if (post.excerpt && index){ %>
-        <%- post.excerpt %>
-          <p class="article-more-link">
-            <a href="<%- url_for(post.path) %>#more"><%= __('Read More') %></a>
-          </p>
-      <% } else { %>
-        <%- post.content %>
-      <% } %>
     </div>
-    <% if (!index){ %>
-    <footer class="article-footer">
-      <%- partial('post/tag') %>
-      <%- partial('post/share') %>
-    </footer>
+  </div>
+  <% } %>
+  <div class="article-entry" itemprop="articleBody">
+    <% if (post.excerpt && index){ %>
+      <%- post.excerpt %>
+        <p class="article-more-link">
+          <a href="<%- url_for(post.path) %>#more"><%= __('Read More') %></a>
+        </p>
+    <% } else { %>
+      <% if (!index){ %>
+      <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
+      <% } %>
+      <%- post.content %>
     <% } %>
   </div>
+  <% if (!index){ %>
+  <div class="article-footer">
+    <%- partial('post/tag') %>
+  </div>
+  <% } %>
 </article>
 <% if (!index){ %><%- partial('post/nav') %><% } %>
+</div>

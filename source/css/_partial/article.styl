@@ -1,221 +1,156 @@
+.article-cover
+  position: relative
+  width: 100%
+  height: 61.8vh
+  text-align: center
+  overflow: hidden
+  background-size: cover
+  background-position: center
+  z-index: 1
+  &:before
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+    margin-right: -.25em
+  .cover-layer
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background-color: #fff
+    opacity: .6
+    z-index: -1
+  @media mq-mobile
+    height: 45vh
+
+.article-header
+  text-align: center
+  display: inline-block
+  vertical-align: middle
+  padding: article-padding 0
+  z-index: 11
+  .article-title
+    h1
+      margin: 12px 0
+      font-size: 32px
+      text-transform: none
+      letter-spacing: 0px
+      font-weight: 300
+      font-style: normal
+      @media mq-mobile
+        font-size: 24px
+
+    .article-date, .article-category-link
+      font-size: 16px
+      color: color-grey
+      font-weight: 300
+
+    .article-category-link
+      &:hover
+        color: color-default
+
+    @media mq-mobile
+      height: auto
+
 .article
-	width: 100%
-	margin-top: block-margin
-	@media mq-mobile
-		margin-top: (block-margin/4)
+  width: 100%
+  margin-top: block-margin
+  @media mq-mobile
+    margin-top: (block-margin/1.6)
+  
+  .article-header
+    display: block
 
-	.article-cover
-		position: absolute
-		left: 0
-		top: 0
-		width: 100%
-		height: 540px
-		overflow: hidden
-		opacity: .5
-		z-index: -1
-		img
-			width: 100%
+  .article-entry
+    @extend $type-style
+    
+    .article-more-link
+      margin: 40px 0 0
+      text-align: center
+      font-family: Abel
+      a
+        line-height: 26px
+        padding: 0 30px
+        border-radius: 13px
+        color: color-grey
+        text-decoration: none
+        &:hover
+          color: color-default
 
-		@media mq-mobile
-			height: auto
-
-
-	.article-inner
-		position: relative
-		@media mq-mobile
-			padding: 0 20px
-
-		.article-header
-			@extend $article-header
-
-			.article-date, .article-category-link
-				color: rgba(color-txt, 0.5)
-				font-size: 16px
-				font-weight: 300
-
-			.article-category-link
-				a
-					color: rgba(color-txt, 0.5)					
-
-		.article-entry
-			@extend $type-style
-			padding-bottom: 60px 
-			
-			.article-more-link
-				margin: 40px 0 0
-				text-align: center
-				font-family: Abel
-				a
-					line-height: 26px
-					padding: 0 30px
-					border-radius: 13px
-					color: color-grey
-					text-decoration: none
-
-		.article-footer
-			padding: article-padding
-			height: 60px
-			text-align: center
-			border-top: 1px dotted color-border
-			.article-tag,
-			.article-share
-				display: inline
-				padding: 0 20px
-				color: color-grey
-				a
-					color: color-grey
-			.article-share
-				i
-					font-size: 14px
-					margin-right: 4px
+  .article-footer
+    padding: article-padding 0
+    margin-top: article-padding
+    text-align: center
+    border-top: 1px dotted color-border
+    .article-tag
+      display: inline
+      padding: 0 20px
+      color: color-grey
+      a
+        color: color-grey
+        &:hover
+          color: color-default
 
 .article-type-post
-	.article-inner
-		.article-header
-			h1.article-title
-				margin-bottom: 280px
+  margin-top: 0
+  .article-date
+    display: block
+    opacity: .7
+    margin: 0 auto article-padding auto
 
-				@media mq-mobile
-					margin-bottom: 40px
+.article-cover
+  .article-header
+    h1
+      font-size: 42px
+      @media mq-mobile
+        font-size: 24px
 
+    .article-date, .article-category-link
+      font-size: 20px
+      color: color-default
 
-.article-toc
-	position: fixed
-	right: 30px
-	top: 30%
-
-	@media mq-mobile
-		display: none
-
-	.toc
-		li
-			padding: 2px 0
-			a
-				display: block
-				padding: 3px 5px
-				line-height: 25px
-				height: 25px
-				color: color-grey
-				text-align: right
-				&:before
-					float: right
-					content: ''
-					width: 7px
-					height: 7px
-					vertical-align: middle
-					background: #fff
-					margin-left: 5px
-					border: 2px solid color-grey
-					border-radius: 50%
-					margin-top: 2px
-				span
-					transition: opacity 0.3s linear;
-					display: block;
-					overflow: hidden;
-					line-height: 1.2;
 
 #article-nav
-	clearfix()
-	position: relative
-	margin: 40px 0
-	&:before
-		absolute-center(8px)
-		content: ""
-		border-radius: 50%
-		background: color-grey
+  clearfix()
+  position: relative
+  margin: article-padding 0
+  &:before
+    absolute-center(8px)
+    content: ""
+    border-radius: 50%
+    background: color-grey
 
 .article-nav-link-wrap
-	text-decoration: none
-	color: color-grey
-	box-sizing: border-box
-	text-align: center
-	display: block
-	width: 50%
-	&:hover
-		color: color-default
+  text-decoration: none
+  color: color-grey
+  box-sizing: border-box
+  text-align: center
+  display: block
+  width: 50%
+  &:hover
+    color: color-default
 
 #article-nav-newer
-	float: left
-	text-align: right
-	padding-right: 30px
+  float: left
+  text-align: right
+  padding-right: 30px
 
 #article-nav-older
-	float: right
-	text-align: left
-	padding-left: 30px
+  float: right
+  text-align: left
+  padding-left: 30px
 
 .article-nav-caption
-	letter-spacing: 2px
-	line-height: 1em
-	text-transform: uppercase
-	#article-nav-newer &
-		margin-right: -2px
+  letter-spacing: 2px
+  line-height: 1em
+  text-transform: uppercase
+  #article-nav-newer &
+    margin-right: -2px
 
 .article-nav-title
-	font-size: 0.85em
-	margin-top: 0.5em
-	line-height: line-height
+  font-size: 0.85em
+  margin-top: 0.5em
+  line-height: line-height
 
-.article-share-box
-	position: absolute
-	display: none
-	background: #fff
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1)
-	border-radius: 3px
-	margin-left: -145px
-	overflow: hidden
-	z-index: 1
-	&.on
-		display: block
-
-.article-share-input
-	width: 100%
-	background: none
-	box-sizing: border-box
-	font: 14px font-sans
-	padding: 0 10px
-	color: color-default
-	outline: none
-	border: 1px solid color-border
-	border-radius: 3px 3px 0 0
-	height: 36px
-	line-height: 36px
-
-.article-share-links
-	clearfix()
-	background: color-background
-	a
-		width: 50px
-		height: 36px
-		display: block
-		float: left
-		text-align: center
-		line-height: 36px
-		position: relative
-		color: #999
-		text-shadow: 0 1px #fff
-		
-		&:before
-			font-size: 20px
-		&:hover
-			color: #fff
-
-.article-share-twitter
-	&:hover
-		background: color-twitter
-		text-shadow: 0 1px darken(color-twitter, 20%)
-
-.article-share-facebook
-	&:hover
-		background: color-facebook
-		text-shadow: 0 1px darken(color-facebook, 20%)
-
-.article-share-pinterest
-	&:hover
-		background: color-pinterest
-		text-shadow: 0 1px darken(color-pinterest, 20%)
-
-.article-share-google
-	&:hover
-		background: color-google
-		text-shadow: 0 1px darken(color-google, 20%)

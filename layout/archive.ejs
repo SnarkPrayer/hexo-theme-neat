@@ -1,28 +1,5 @@
-<div class="timeline timeline-wrap">
-  <% var last;
-    page.posts.each(function(post, i) {
-      var year = post.date.year();
-      if (last != year) {
-        last = year; %>
-    <div class="timeline-row timeline-row-major">
-      <h1 class="title">
-        <%= year %>
-      </h1>
-    </div>
-    <% } %>
-  <div class="timeline-row">
-    <div class="content">
-      <%- partial('_partial/post/date', { post: post, class_name: 'article-date', date_format: null }) %>
-      <%- partial('_partial/post/title', { post: post, index: true, class_name: 'timeline-article-title' }) %>
-    </div>
-  </div>
-  <% }); %>
+<div class="main">
+<div class="content">
+<%- partial('_partial/archive', {pagination: config.archive, index: true}) %>
 </div>
-<% if (page.total > 1) { %>
-  <nav id="page-nav">
-    <%- paginator({
-      prev_text: '&laquo; ' + __('nav.prev'),
-      next_text: __('nav.next') + ' &raquo;'
-    }) %>
-  </nav>
-<% } %>
+</div>

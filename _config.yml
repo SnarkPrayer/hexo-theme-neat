@@ -1,48 +1,43 @@
 # main menu navigation
 menu:
-	Home: /
-	#Tags: /tags
-	#About: /about
-	#Contact: /contact
-	Archives: /archives
+  Home: /
+  #Tags: /tags
+  #About: /about
+  #Contact: /contact
+  Archives: /archives
 
 # stylesheets loaded in the <head>
 stylesheets:
 - /css/style.css
 - /css/ionicons.css
-- https://fonts.googleapis.com/css?family=Abel|Alegreya+Sans+SC #logo及导航字体
+- https://fonts.googleapis.com/css?family=Abel|Alegreya+Sans+SC
 
 # scripts loaded in the end of the body
 scripts:
-- /js/main.js
+- /js/main.js # main.js务必位于最后
 
 # Customize
 customize:
-		favicon: # /css/images/favicon.ico
-		social_icon_prefix: ion-social
-		social_links:
-				github: 
-				twitter: 
-				# instagram: 
-				steam: 
-				# dribbble: 
-				# facebook: /
-				# dribbble: /
-				# rss: /
-				# weibo: /
+    favicon: /css/images/favicon.ico
+    social_icon_prefix: ion-social
+    social_links:
+        # 支持列表详见 http://ionicons.com/ 包含的 logo icon
+        github: 
+        twitter: 
+        steam: 
 
 # Plugins
 plugins:
-	google_analytics: # enter the tracking ID for your Google Analytics
-	google_site_verification: # enter Google site verification code
+  google_analytics:  # enter the tracking ID for your Google Analytics
+  google_site_verification: # enter Google site verification code
 
 # Miscellaneous
 miscellaneous:
-		open_graph: # see http://ogp.me
-				fb_app_id:
-				fb_admins:
-				twitter_id:
-				google_plus:
+    open_graph: # see http://ogp.me
+        fb_app_id:
+        fb_admins:
+        twitter_id:
+        google_plus:
 
 sitemap:
     path: sitemap.xml
