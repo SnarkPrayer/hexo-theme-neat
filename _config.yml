@@ -1,6 +1,6 @@
 # main menu navigation
 menu:
-  Home: /
+  # Home: /
   #Tags: /tags
   #About: /about
   #Contact: /contact
@@ -22,14 +22,17 @@ customize:
     social_icon_prefix: ion-social
     social_links:
         # 支持列表详见 http://ionicons.com/ 包含的 logo icon
-        github: https://github.com/SnarkPrayer
-        twitter: https://twitter.com/SnarkPrayer
-        steam: http://steamcommunity.com/profiles/76561198104066965/
+        github: 
+        twitter: 
+        steam: 
 
 # Plugins
 plugins:
-  google_analytics: UA-71977222-1 # enter the tracking ID for your Google Analytics
+  google_analytics: # enter the tracking ID for your Google Analytics
   google_site_verification: # enter Google site verification code
+
+# comments
+hypercomments: # hypercomments id
 
 # Miscellaneous
 miscellaneous:
