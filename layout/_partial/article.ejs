@@ -1,4 +1,3 @@
-<div class="content">
 <article id="<%= post.layout %>-<%= post.slug %>" class="article<% if (!index){ %> article-type-<%= post.layout %><% } %>" itemscope itemprop="blogPost">
   <% if (index){ %>
   <div class="article-header">
@@ -16,9 +15,7 @@
           <a href="<%- url_for(post.path) %>#more"><%= __('Read More') %></a>
         </p>
     <% } else { %>
-      <% if (!index){ %>
       <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-      <% } %>
       <%- post.content %>
     <% } %>
   </div>
@@ -28,6 +25,5 @@
     <%- partial('post/comments') %>
   </div>
   <% } %>
+  <% if (!index){ %><%- partial('post/nav') %><% } %>
 </article>
-<% if (!index){ %><%- partial('post/nav') %><% } %>
-</div>

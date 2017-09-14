@@ -1,36 +1,10 @@
-.article-cover
-  position: relative
-  width: 100%
-  height: 61.8vh
-  text-align: center
-  overflow: hidden
-  background-size: cover
-  background-position: center
-  z-index: 1
-  &:before
-    content: ''
-    display: inline-block
-    height: 100%
-    vertical-align: middle
-    margin-right: -.25em
-  .cover-layer
-    position: absolute
-    left: 0
-    right: 0
-    top: 0
-    bottom: 0
-    background-color: #fff
-    opacity: .6
-    z-index: -1
-  @media mq-mobile
-    height: 45vh
-
 .article-header
+  position: relative
   text-align: center
   display: inline-block
   vertical-align: middle
   padding: article-padding 0
-  z-index: 11
+  z-index: 20
   .article-title
     h1
       margin: 12px 0
@@ -39,7 +13,7 @@
       letter-spacing: 0px
       font-weight: 300
       font-style: normal
-      @media mq-mobile
+      @media mq-sm
         font-size: 24px
 
     .article-date, .article-category-link
@@ -51,14 +25,58 @@
       &:hover
         color: color-default
 
-    @media mq-mobile
+    @media mq-sm
       height: auto
 
-.article
+.article-cover, .article-type-post
+  position: relative
+  top: -75px
+  will-change transform
+
+.article-cover
   width: 100%
-  margin-top: block-margin
-  @media mq-mobile
-    margin-top: (block-margin/1.6)
+  height: 66vh
+  text-align: center
+  overflow: hidden
+  background-size: cover
+  background-position: center
+  z-index: 1
+  @media mq-sm
+    height: 45vh
+  &:before
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+    margin-right: -.25em
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: rgba(255, 255, 255, .5)
+    z-index: 10
+  .article-header
+    padding-top: article-padding*2
+    .article-title
+      h1
+        font-size: 42px
+        @media mq-sm
+          font-size: 24px
+      .article-date, .article-category-link
+        font-size: 16px
+        color: color-default
+
+.article
+  max-width: column-width * main-column
+  padding: 0 article-padding*.5
+  margin: block-margin*.5 auto 0 auto
+  &:first-child
+    margin-top: block-margin*1.5
+    @media mq-sm
+      margin-top: article-padding*1.5
   
   .article-header
     display: block
@@ -67,7 +85,7 @@
     @extend $type-style
     
     .article-more-link
-      margin: 40px 0 0
+      margin: article-padding 0
       text-align: center
       font-family: Abel
       a
@@ -97,24 +115,12 @@
   .article-date
     display: block
     opacity: .7
-    margin: 0 auto article-padding auto
-
-.article-cover
-  .article-header
-    h1
-      font-size: 42px
-      @media mq-mobile
-        font-size: 24px
-
-    .article-date, .article-category-link
-      font-size: 20px
-      color: color-default
-
+    margin: article-padding auto
 
 #article-nav
   clearfix()
   position: relative
-  margin: article-padding 0
+  margin-top: article-padding
   &:before
     absolute-center(8px)
     content: ""
@@ -153,3 +159,29 @@
   margin-top: 0.5em
   line-height: line-height
 
+
+.pagination
+  margin: article-padding*1.5 auto
+  text-align: center
+  color: color-grey
+  overflow: hidden
+  a, span
+    height: 30px
+    color: color-txt
+    background-color: #fff
+    padding: 0 12px
+    line-height: 30px
+    text-align: center
+    display: inline-block
+    border-radius: 2px
+    
+  a
+    text-decoration: none
+    &:hover
+      color: #fff
+      background: color-default
+      
+    .page-number
+      display: inline-block
+  .current
+    color: color-grey

@@ -1,10 +1,12 @@
 # main menu navigation
 menu:
   # Home: /
-  #Tags: /tags
-  #About: /about
-  #Contact: /contact
   Archives: /archives
+  # Tags: /tags
+  # Category: /categories
+  # About: /about
+  # Contact: /contact
+  
 
 # stylesheets loaded in the <head>
 stylesheets:
@@ -22,9 +24,9 @@ customize:
     social_icon_prefix: ion-social
     social_links:
         # 支持列表详见 http://ionicons.com/ 包含的 logo icon
-        github: 
-        twitter: 
-        steam: 
+        github: https://github.com/SnarkPrayer
+        twitter: https://twitter.com/SnarkPrayer
+        steam: http://steamcommunity.com/profiles/76561198104066965/
 
 # Plugins
 plugins:
@@ -32,7 +34,9 @@ plugins:
   google_site_verification: # enter Google site verification code
 
 # comments
-hypercomments: # hypercomments id
+comments:
+  enable: 
+  hypercomments: # your id
 
 # Miscellaneous
 miscellaneous:

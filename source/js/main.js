@@ -6,4 +6,7 @@ $(function(){
 	    }
 	  })
 	})
+	$('.navbar').click(function(){
+		$('#container').toggleClass('sidenavopen')
+	})
 })

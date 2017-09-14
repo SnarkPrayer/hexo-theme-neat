@@ -89,52 +89,57 @@ body
   font-family: PingFang SC,Helvetica Neue,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif
   font-size: font-size
   -webkit-text-size-adjust: 100%
-html, body
-  height: 100%
 
 .text-center
   display: inline
   text-align: center
 
-.main
-  max-width: column-width * main-column
+/* 滚动条 */
+::-webkit-scrollbar-thumb:horizontal
+  width: 5px
+  background-color: color-grey
+  border-radius: 6px
+
+::-webkit-scrollbar-track-piece
+  background-color: #fff
+  border-radius: 0
+
+::-webkit-scrollbar
+  width: 10px
+  height: 8px
+
+::-webkit-scrollbar-thumb:vertical
+  height: 50px
+  background-color: #999
+  border-radius: 4px
+  outline: 2px solid #fff
+  outline-offset: -2px
+  border: 2px solid #fff
+
+::-webkit-scrollbar-thumb:hover
+  height: 50px
+  background-color: #666
+  -webkit-border-radius: 4px
+
+#container
+  background-color: #fff
+  min-height: 100vh
+  width: 100%
+  transition: transform .2s ease-in-out
+.sidenavopen
+  position: fixed
+  transform: translate3d(-200px,0,0)
+  .header-nav
+    nav
+      display: block
+      a
+        display: block
+
+.content
+  position: relative
+  width: 100%
   margin: 0 auto
-  padding: article-padding * 2.5 article-padding 0 article-padding
-  @media mq-mobile
-    padding: article-padding*1.5 article-padding*0.5 0 article-padding*0.5
-
-  .content
-    width: 100%
-    max-width: 700px
-    display: block
-    margin: 0 auto
-
-
-.pagination
-  margin: block-margin auto 0 auto
-  text-align: center
-  color: color-grey
-  overflow: hidden
-  a, span
-    height: 30px
-    color: color-txt
-    background-color: #fff
-    padding: 0 12px
-    line-height: 30px
-    text-align: center
-    display: inline-block
-    border-radius: 2px
-    
-  a
-    text-decoration: none
-    &:hover
-      color: #fff
-      background: color-default
-      
-    .page-number
-      display: inline-block
-  .current
-    color: color-grey
+  transition all 0.5s ease-in-out
 
 
 @import "_extend"
@@ -142,4 +147,6 @@ html, body
 @import "_partial/article"
 @import "_partial/archive"
 @import "_partial/footer"
+@import "_partial/tags"
+@import "_partial/category"
 @import "_partial/highlight"
