@@ -1,42 +1,36 @@
 # main menu navigation
 menu:
-  # Home: /
+  Home: /
   Archives: /archives
   # Tags: /tags
   # Category: /categories
   # About: /about
-  # Contact: /contact
+  # Contact: 
   
 
 # stylesheets loaded in the <head>
 stylesheets:
 - /css/style.css
-- /css/ionicons.css
-- https://fonts.googleapis.com/css?family=Abel|Alegreya+Sans+SC
+- /css/lib_zoom.css
+- https://fonts.cat.net/css?family=Libre+Barcode+39|Source+Code+Pro|Cormorant+Garamond
 
 # scripts loaded in the end of the body
 scripts:
+- /js/lib/zoom-vanilla.min.js
 - /js/main.js # main.js务必位于最后
 
 # Customize
 customize:
     favicon: /css/images/favicon.ico
-    social_icon_prefix: ion-social
-    social_links:
-        # 支持列表详见 http://ionicons.com/ 包含的 logo icon
-        github: https://github.com/SnarkPrayer
-        twitter: https://twitter.com/SnarkPrayer
-        steam: http://steamcommunity.com/profiles/76561198104066965/
 
 # Plugins
 plugins:
-  google_analytics: # enter the tracking ID for your Google Analytics
-  google_site_verification: # enter Google site verification code
+  google_analytics:  # enter the tracking ID for your Google Analytics
 
-# comments
+# comments only support hypercomments
 comments:
-  enable: 
-  hypercomments: # your id
+  enable: true
+  hypercomments:  #id
 
 # Miscellaneous
 miscellaneous:

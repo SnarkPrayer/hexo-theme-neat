@@ -3,11 +3,12 @@
   text-align: center
   display: inline-block
   vertical-align: middle
-  padding: article-padding 0
+  margin-bottom: article-padding
   z-index: 20
+
   .article-title
     h1
-      margin: 12px 0
+      margin: 10px 0 14px 0
       font-size: 32px
       text-transform: none
       letter-spacing: 0px
@@ -18,8 +19,7 @@
 
     .article-date, .article-category-link
       font-size: 16px
-      color: color-grey
-      font-weight: 300
+      opacity: .8
 
     .article-category-link
       &:hover
@@ -31,7 +31,6 @@
 .article-cover, .article-type-post
   position: relative
   top: -75px
-  will-change transform
 
 .article-cover
   width: 100%
@@ -65,18 +64,17 @@
         font-size: 42px
         @media mq-sm
           font-size: 24px
-      .article-date, .article-category-link
-        font-size: 16px
-        color: color-default
 
 .article
   max-width: column-width * main-column
   padding: 0 article-padding*.5
-  margin: block-margin*.5 auto 0 auto
+  margin: block-margin auto 0 auto
+  .article-date
+    font-family: 'Cormorant Garamond', serif
   &:first-child
-    margin-top: block-margin*1.5
+    margin-top: block-margin*2
     @media mq-sm
-      margin-top: article-padding*1.5
+      margin-top: article-padding*2.5
   
   .article-header
     display: block
@@ -86,12 +84,9 @@
     
     .article-more-link
       margin: article-padding 0
+      font-family: 'Cormorant Garamond', serif
       text-align: center
-      font-family: Abel
       a
-        line-height: 26px
-        padding: 0 30px
-        border-radius: 13px
         color: color-grey
         text-decoration: none
         &:hover
@@ -102,19 +97,19 @@
     text-align: center
     .article-tag
       padding: 0 0 article-padding 0
-      color: color-grey
       border-bottom: 1px dotted color-border
-      margin-bottom: article-padding;
+      margin-top: article-padding
       a
         color: color-grey
         &:hover
           color: color-default
+    .comments
+      margin-top: article-padding
 
 .article-type-post
   margin-top: 0
   .article-date
     display: block
-    opacity: .7
     margin: article-padding auto
 
 #article-nav

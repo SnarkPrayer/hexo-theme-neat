@@ -54,36 +54,13 @@ a:focus
   visibility: hidden;
   display: block;
   height: 0;
-  clear: both;
-p
-  margin-bottom: 1.4em
-  text-align: justify
-h1
-  font-size: 2em
-h2
-  font-size: 1.5em
-h3
-  font-size: 1.3em
-h4
-  font-size: 1.2em
-h5
-  font-size: 1em
-h6
-  font-size: 1em
-
-h1,h2,h3,h4,h5,h6
-  font-weight: 100
+  clear: both
 
 hr
   border: 1px dashed color-border
-
-.caption
-  color: color-grey
-  display: block
-  font-size: 0.9em
-  margin-top: 0.5em
-  position: relative
-  text-align: center
+  
+h1,h2,h3,h4,h5
+  font-weight normal
 
 body
   font-family: PingFang SC,Helvetica Neue,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif
@@ -93,33 +70,6 @@ body
 .text-center
   display: inline
   text-align: center
-
-/* 滚动条 */
-::-webkit-scrollbar-thumb:horizontal
-  width: 5px
-  background-color: color-grey
-  border-radius: 6px
-
-::-webkit-scrollbar-track-piece
-  background-color: #fff
-  border-radius: 0
-
-::-webkit-scrollbar
-  width: 10px
-  height: 8px
-
-::-webkit-scrollbar-thumb:vertical
-  height: 50px
-  background-color: #999
-  border-radius: 4px
-  outline: 2px solid #fff
-  outline-offset: -2px
-  border: 2px solid #fff
-
-::-webkit-scrollbar-thumb:hover
-  height: 50px
-  background-color: #666
-  -webkit-border-radius: 4px
 
 #container
   background-color: #fff
@@ -140,6 +90,12 @@ body
   width: 100%
   margin: 0 auto
   transition all 0.5s ease-in-out
+sup
+  font-family 'Source Code Pro', monospace
+  font-size: 40%
+.icon
+  height: 1em
+  width: 1em
 
 
 @import "_extend"

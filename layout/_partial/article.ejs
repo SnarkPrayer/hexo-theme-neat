@@ -2,7 +2,7 @@
   <% if (index){ %>
   <div class="article-header">
     <div class="article-title">
-      <%- partial('post/category') %>
+      
       <%- partial('post/title', {class_name: 'article-title'}) %>
       <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
     </div>
@@ -15,7 +15,9 @@
           <a href="<%- url_for(post.path) %>#more"><%= __('Read More') %></a>
         </p>
     <% } else { %>
+      <% if (is_post()){ %>
       <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
+      <% } %>
       <%- post.content %>
     <% } %>
   </div>

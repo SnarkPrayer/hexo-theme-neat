@@ -93,30 +93,34 @@
   top 0
   left 25px
   display block
+  z-index 200
   margin 25px 0
-  font-size 18px
-  font-family 'Alegreya+Sans+SC'
+  font-size 26px
+  font-family 'Libre Barcode 39', cursive
   text-transform uppercase
-  font-weight bold
-  z-index 800
+  sup
+    opacity .5
   @media mq-sm
     left auto
     right 25px
+
 .nav
     position absolute
     top 0
     right 0
+    font-family 'Source Code Pro', monospace
     display inline-block
     margin 25px
     transition 0.5s
-    z-index 900
+    text-transform uppercase
+    z-index 200
     @media mq-sm
       position relative
       pointer-events none
       left 0
       right auto
 .nav-item
-  margin 0 2em
+  margin 0 1.2em
   font-size 14px
   &:first-child
     margin-left 0
